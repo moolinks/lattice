@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Lattice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#20251f"/>
+      <stop offset="0.62" stop-color="#171b17"/>
+      <stop offset="1" stop-color="#101410"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e46648"/>
+      <stop offset="1" stop-color="#b83b25"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.82" cy="0.15" r="0.7">
+      <stop offset="0" stop-color="#c84b31" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#c84b31" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="round">
+      <rect width="512" height="512" rx="112"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#round)">
+    <rect width="512" height="512" fill="url(#bg)"/>
+    <rect width="512" height="512" fill="url(#glow)"/>
+
+    <!-- fine research grid -->
+    <g stroke="#efe7d2" stroke-opacity="0.055" stroke-width="1">
+      <path d="M64 0v512M128 0v512M192 0v512M256 0v512M320 0v512M384 0v512M448 0v512"/>
+      <path d="M0 64h512M0 128h512M0 192h512M0 256h512M0 320h512M0 384h512M0 448h512"/>
+    </g>
+
+    <!-- lattice edges -->
+    <g fill="none" stroke="#efe7d2" stroke-linecap="round">
+      <path d="M128 128H384M128 256H384M128 384H384" stroke-opacity="0.18" stroke-width="8"/>
+      <path d="M128 128V384M256 128V384M384 128V384" stroke-opacity="0.18" stroke-width="8"/>
+      <!-- the L is the confident path through the lattice -->
+      <path d="M128 128V384H384" stroke="#efe7d2" stroke-width="27" stroke-linejoin="round"/>
+      <path d="M128 128L384 384" stroke="#c84b31" stroke-opacity="0.55" stroke-width="5" stroke-dasharray="2 17"/>
+    </g>
+
+    <!-- nodes -->
+    <circle cx="128" cy="128" r="28" fill="url(#accent)"/>
+    <circle cx="128" cy="128" r="11" fill="#f3ead6"/>
+    <circle cx="256" cy="256" r="15" fill="#c6a45d"/>
+    <circle cx="384" cy="384" r="22" fill="#efe7d2"/>
+    <circle cx="384" cy="384" r="8" fill="#171b17"/>
+
+    <circle cx="384" cy="128" r="9" fill="#efe7d2" fill-opacity="0.5"/>
+    <circle cx="128" cy="384" r="9" fill="#efe7d2" fill-opacity="0.5"/>
+    <circle cx="256" cy="128" r="7" fill="#efe7d2" fill-opacity="0.32"/>
+    <circle cx="256" cy="384" r="7" fill="#efe7d2" fill-opacity="0.32"/>
+    <circle cx="384" cy="256" r="7" fill="#efe7d2" fill-opacity="0.32"/>
+
+    <rect x="1" y="1" width="510" height="510" rx="111" fill="none" stroke="#efe7d2" stroke-opacity="0.1"/>
+  </g>
+</svg>

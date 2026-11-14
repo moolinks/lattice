@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Node
+node_modules/
+frontend/dist/
+backend/app/static/
+*.tsbuildinfo
+
+# Local data and secrets
+.env
+.env.*
+!.env.example
+research-data/
+e2e-data/
+*.db
+*.db-wal
+*.db-shm
+backups/
+logs/
+
+# Generated artifacts
+*.log
+*.pdf
+lattice-test-*/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

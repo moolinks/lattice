@@ -1,0 +1,21 @@
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+ignore = [
+  "B008",   # FastAPI Depends/File in defaults is the documented pattern
+  "E501",   # long Chinese strings and URLs
+  "RUF001", # Chinese full-width punctuation is intentional
+  "RUF002",
+  "RUF003",
+  "SIM117", # explicit nested context managers read better in download loops
+  "UP017",  # timezone.utc remains readable and py3.11 compatible
+  "UP045",  # Optional[...] is used consistently in Pydantic models
+  "RUF034",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"app/seed.py" = ["F841"]
+"tests/*" = ["E402", "F541"]

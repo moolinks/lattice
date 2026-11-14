@@ -306,7 +306,7 @@ pip install -e .
 草稿源文件：`~/research-data/drafts/D0001/main.md`
 
 ```markdown
-生成式推荐正在从排序转向生成 [@vaswani2017attention]。
+这是一个引用示例 [@example2025paper]。
 
 {{run:E0001-R01/curve.png}}
 ```
